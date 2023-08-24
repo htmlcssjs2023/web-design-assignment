@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Location</title>
+</head>
+<body>
+    
+    <h1>Geo Location</h1>
+    <button onclick="getLocation()">Know GEO Location</button>
+
+    <div id="root"></div>
+
+    <script>
+
+        let x = document.getElementById("root");
+        console.log(x);
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{
+                x.innerHTML = "Your location is not available ";
+            }
+
+        }
+        function showPosition(position){
+            x.innerHTML = "ldkajd" + position.coords
+        }
+
+    </script>
+</body>
+</html>

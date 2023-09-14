@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>robot</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .robot_head{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            border-radius: 50% 50% 10px 10px;
+            position: relative;
+            z-index: 3;
+        }
+        .right_eye,
+        .left_eye{
+            width: 40px;
+            height: 30px;
+            background: #555;
+            border-radius: 50%;
+            position:absolute;  
+        }
+        .left_eye{
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%);
+        }
+        .right_eye{
+            top: 40%;
+            left: 65%;
+            transform: translate(-50%);
+        }
+        .left_ear,
+        .right_ear{
+            width: 50px;
+            height: 40px ;
+            background: orange;
+            position: absolute;
+            z-index: -1;
+        }
+        .left_ear{
+            border-radius: 15px 0 0 15px;
+            top:40%;
+            left:-35px; 
+        }
+        .right_ear{
+            border-radius: 0 15px 15px 0;
+            top:40%;
+            right:-35px;
+        }
+        .left_entiner,
+        .right_entiner{
+            width: 10px;
+            height: 100px;
+            background-color: #555;
+            position: absolute;
+            border-radius: 10px;
+        }
+        .left_entiner{
+            top: 85px;
+            left: 42%;
+        }
+        .right_entiner{
+            top: 85px;
+            right: 42%;
+        }
+        .robot_neck{
+            width: 60px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            background-color: #555;
+            top:210px;
+        }
+        .robot_body{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border-radius: 40% 40% 10px 10px;
+            position: absolute;
+            top: 300px;
+        }
+        .body_chock{
+            width: 76px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #555;
+            position: absolute;
+            top:21%;
+            left:31%;
+        }
+        .body_line_1,
+        .body_line_2{
+            width: 140px;
+            height: 10px;
+            background-color: #555;
+            border-radius: 10px;
+            position: absolute; 
+        }
+        .body_line_1{
+            top:62%;
+            left:14%;
+        }
+        .body_line_2{
+            top:70%;
+            left:14%;
+        }
+        .left_hand,
+        .right_hand{
+            width: 100px;
+            height: 50px;
+            background: #555;
+            position: absolute;
+        }
+        .left_hand{
+            top: 350px;
+            left: 39%;
+            z-index: -1;
+        }
+        .right_hand{
+            top: 350px;
+            right: 39%;
+            z-index: -1;
+        }
+        .left_hand_warm,
+        .right_hand_warm{
+            width: 50px;
+            height: 150px;
+            background-color: orange;
+            position: absolute;   
+        }
+        .left_hand_warm{
+            top: 328px;
+            left:37%;
+            border-radius: 50% 5px 0 0;
+        }
+        .right_hand_warm{
+            top: 328px;
+            right:37%;
+            border-radius: 0 50% 0 0;
+        }
+        .left_hand_palm,
+        .right_hand_palm{
+            width: 60px;
+            height: 60px;
+            background-color: orangered;
+            position: absolute;  
+        }
+        .left_hand_palm{
+            left: 36.5%;
+            top: 439px;
+            border-radius: 50%;
+        }
+        .right_hand_palm{
+            right: 36.5%;
+            top: 439px;
+            border-radius: 50%;
+        }
+        .right_hand_finger_1,
+        .right_hand_finger_2,
+        .left_hand_finger_1,
+        .left_hand_finger_2{
+            width: 10px;
+            height: 100px;
+            background-color: orangered;
+            position: absolute;
+            
+        }
+        .right_hand_finger_1{
+            left: 37%;
+            top: 446px;
+            border-radius: 50% 0 5px 5px;
+        }
+        .right_hand_finger_2{
+            left: 40%;
+            top: 448px;
+            border-radius: 0 50% 5px 5px;
+        }
+        .left_hand_finger_1{
+            right: 37%;
+            top: 446px;
+            border-radius: 0 50% 5px 5px;
+        }
+        .left_hand_finger_2{
+            right: 40%;
+            top: 448px;
+            border-radius: 50% 0 5px 5px;
+        }
+
+        .left_leg,
+        .right_leg{
+            width: 60px;
+            height: 110px;
+            background-color: orange;
+            position: absolute;
+            background-color: #555;
+            z-index: -1;
+        }
+        .left_leg{
+            top: 480px;
+            left:44%;
+        }
+        .right_leg{
+            top: 480px;
+            right:44%;
+        }
+        .left_leg_bol,
+        .right_leg_bol{
+            width: 80px;
+            height: 50px;
+            background-color: orange;
+            border-radius: 20px 20px 10px 10px;
+            position: absolute;
+        }
+        .left_leg_bol {
+            top: 573px;
+            left: 43.4%;
+        }
+        .right_leg_bol {
+            top: 573px;
+            right: 43.4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="robot_head">
+            <div class="right_eye"></div>
+            <div class="left_eye"></div>
+            <div class="left_ear"></div>
+            <div class="right_ear"></div>
+        </div>
+        <div class="left_entiner"></div>
+        <div class="right_entiner"></div>
+        <div class="robot_neck"></div>
+        <div class="robot_body">
+            <div class="body_chock"></div>
+            <div class="body_line_1"></div>
+            <div class="body_line_2"></div>
+        </div>
+        <div class="left_hand"></div>
+        <div class="right_hand"></div>
+
+        <div class="left_hand_warm"></div>
+        <div class="left_hand_palm"></div>
+        <div class="left_hand_finger"></div>
+
+        <div class="right_hand_warm"></div>
+        <div class="right_hand_palm"></div>
+
+        <div class="left_hand_finger_1"></div>
+        <div class="left_hand_finger_2"></div>
+
+        <div class="right_hand_finger_1"></div>
+        <div class="right_hand_finger_2"></div>
+
+        <div class="left_leg"></div>
+        <div class="right_leg"></div>
+
+        <div class="left_leg_finger"></div>
+
+        <div class="left_leg_bol"></div>
+        <div class="right_leg_bol"></div>
+    </div>
+</body>
+</html>

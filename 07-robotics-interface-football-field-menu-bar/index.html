@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Field</title>
+
+    <style>
+       body{
+            background-color: green;
+            margin-top: 100px;
+        }
+        .football-field{
+            width: 1170px;
+            height: 500px;
+            border: 2px solid white;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .goal-kiper{
+            width: 60px;
+            height: 163px;
+            border: 2px solid white;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .man_01{
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            right: -22px;
+            
+        }
+
+
+        .goal-kiper-1{
+            display: flex;
+            align-items: center;
+            width: 60px;
+            height: 163px;
+            border: 2px solid white;
+            position: absolute;
+            right: 0;
+        }
+        .man_02{
+            width: 40px;
+            height: 40px;
+            background-color: orangered;
+            border-radius: 50%;
+            position: absolute;
+            right: 40px;
+        }
+
+        .goal-kiper-2{
+            display: flex;
+            align-items: center;
+            width: 180px;
+            height: 360px;
+            border: 2px solid white;
+            position: absolute;
+            left: 0;
+        }
+        .back_man{
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            right: -13px;
+        }
+       
+        .goal-kiper-3{
+            display: flex;
+            align-items: center;
+            width: 180px;
+            height: 360px;
+            border: 2px solid white;
+            position: absolute;
+            right: 0;
+        }
+        .back_man_1{
+            width: 40px;
+            height: 40px;
+            background-color: orangered;
+            border-radius: 50%;
+            position: absolute;
+            left: -13px;
+        }
+        .circle{
+            width: 20px;
+            height: 120px;
+            border: 2px solid white;
+            border-left: 0;
+            border-radius: 40%;
+            position: absolute;
+            left: 179px;
+        }
+        .circle-1{
+            width: 20px;
+            height: 120px;
+            border: 2px solid white;
+            border-right: 0;
+            border-radius: 40%;
+            position: absolute;
+            right: 179px;
+        }
+        .middle-line{
+            width: 2px;
+            height: 500px;
+            background-color: wheat;
+            position: absolute;
+            left:585px;
+        }
+        .middle-circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid white;
+            position: absolute;
+            left: 486px;
+        }
+        /* back defence  */
+        .back_defence_a_1,
+        .back_defence_a_2,
+
+        .defence_a_1, 
+        .defence_a_2, 
+        .defence_a_3,
+        .defence_a_4, 
+
+        .mid_fielder_a_1,
+        .mid_fielder_a_2,
+        .mid_fielder_a_3{
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+    .back_defence_a_1 {
+        top: 90px;
+        left: 198px;
+    }
+    .back_defence_a_2 {
+        top: 367px;
+        left: 198px;
+    }
+    .defence_a_1{
+        top: 20px;
+        left: 340px;
+    }
+    .defence_a_2{
+        top: 150px;
+        left: 340px;
+    }
+    .defence_a_3{
+        top: 300px;
+        left: 340px;
+    }
+    .defence_a_4{
+        top: 430px;
+        left: 340px;
+    }
+    .mid_fielder_a_1{
+        top: 90px;
+        left: 525px;
+    }
+    .mid_fielder_a_2{
+        top: 221px;
+        left: 525px;
+    }
+    .mid_fielder_a_3{
+        top: 367px;
+        left: 525px;
+    }
+
+    /* b  */
+    .back_defence_b_1,
+    .back_defence_b_2,
+    .defence_b_1,                             
+    .defence_b_2,                             
+    .defence_b_3,                             
+    .defence_b_4,
+    .mid_fielder_b_1,                        
+    .mid_fielder_b_2,                         
+    .mid_fielder_b_3{
+        width: 40px;
+        height: 40px;
+        background-color: orangered;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .back_defence_b_1{
+        top: 90px;
+        right: 198px;
+    } 
+    .back_defence_b_2{
+        top: 367px;
+        right: 198px;
+    }  
+    .defence_b_1{
+        top: 20px;
+        right: 340px;
+    }
+    .defence_b_2{
+        top: 150px;
+        right: 340px;
+    }
+    .defence_b_3{
+        top: 300px;
+        right: 340px;
+    } 
+    .defence_b_4{
+        top: 430px;
+        right: 340px;
+    }
+    .mid_fielder_b_1{
+        top: 90px;
+        right: 525px;
+    }
+    .mid_fielder_b_2{
+        top: 221px;
+        right: 525px;
+    }                      
+    .mid_fielder_b_3{
+        top: 367px;
+        right: 525px;
+    }          
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="football-field">
+            <div class="goal-kiper">
+                <div class="man_01"></div>
+            </div>
+            <div class="goal-kiper-2">
+                <div class="back_man"></div>
+            </div>
+            <div class="circle"></div>
+            <div class="middle-line"></div>
+            <div class="middle-circle"></div>
+
+            <div class="goal-kiper-1">
+                <div class="man_02"></div>
+            </div>
+            <div class="goal-kiper-3">
+                <div class="back_man_1"></div>
+            </div>
+            <div class="circle-1"></div>
+
+            <!-- back defence  -->
+            <div class="back_defence_a_1"></div>
+            <div class="back_defence_a_2"></div>
+
+            <!-- defence_a -->
+            <div class="defence_a_1"></div>
+            <div class="defence_a_2"></div>
+            <div class="defence_a_3"></div>
+            <div class="defence_a_4"></div>
+
+            <!-- mid fielder -->
+            <div class="mid_fielder_a_1"></div>
+            <div class="mid_fielder_a_2"></div>
+            <div class="mid_fielder_a_3"></div>
+
+              <!-- back defence  -->
+              <div class="back_defence_b_1"></div>
+              <div class="back_defence_b_2"></div>
+  
+              <!-- defence_a -->
+              <div class="defence_b_1"></div>
+              <div class="defence_b_2"></div>
+              <div class="defence_b_3"></div>
+              <div class="defence_b_4"></div>
+  
+              <!-- mid fielder -->
+              <div class="mid_fielder_b_1"></div>
+              <div class="mid_fielder_b_2"></div>
+              <div class="mid_fielder_b_3"></div>
+            
+        </div>
+    </div>
+</body>
+</html>

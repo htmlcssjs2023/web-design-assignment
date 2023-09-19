@@ -42,7 +42,7 @@ a{
     color: #fff;
 }
 .bottom_text{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     padding: 10px 0;
     font-weight: 500;
@@ -278,4 +278,78 @@ footer{
     text-align: center;
     padding: 30px 0;
     text-transform: uppercase;
+}
+
+/* =============== Responsive =========== */
+@media screen and (max-width: 576px) {
+
+.banner_content{
+  width: 98%;
+    top: 20%;
+}
+.top_text{
+    font-size: 1.2rem;
+}
+.bottom_text{
+    font-size: .8rem;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    font-weight: 500;
+    color: #fff;
+}
+.demo_btn,
+.buy_btn{
+    margin: 40px 10px 0 0;
+}
+.buy_btn:hover,
+.demo_btn:hover{
+    background-color: orange;
+    border:1px solid transparent;
+}
+
+/* ========== Hero Part End ============== */
+
+.counter{
+  flex-direction: column;
+}
+.counter_page{
+  margin-bottom: 20px;
+}
+
+.number{
+  font-size: 2rem;
+}
+.emoji{
+  font-size: 2rem;
+}
+p.total_text{
+  font-size: 1rem;
+}
+
+/* =============== Counter Part End ==============  */
+
+.feature{
+  padding: 50px;
+}
+.feature_list{
+  border-bottom: 2px solid blueviolet;
+  margin-bottom: 20px;
+}
+.pharaoh{
+  flex-direction: column;
+  padding-top: 50px;
+}
+a.icon{
+ 
+  border-radius: 0;
+  width: 0;
+  height: 0;
+}
+.social_icon{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 120px;
+
+}
 }
